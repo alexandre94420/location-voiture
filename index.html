@@ -27,28 +27,29 @@
                 <img class="header__icon" src="" alt="Sign in icon" width="16" height="16">
                 Sign in
             </a>
+            <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
             <a href="#register" class="header__link">Post listing</a>
         </div>
 
     <!-- section principale -->
-    
-    <section class="main-section">
-    <h1 class="main-section__title">Discover your perfect rental</h1>
-    <p class="main-section__subtitle">Rent Cars, Houses, and Items in Just a Few Clicks</p>
 
-    <div class="main-section__categories category-buttons">
+    <section class="hero-section">
+    <h1 class="hero-section__title">Discover your perfect rental</h1>
+    <p class="hero-section__subtitle">Rent Cars, Houses, and Items in Just a Few Clicks</p>
+    <!-- La classe category-buttons est inutiles si .hero-section__categories est déjà appliquée. -->
+    <div class="hero-section__categories category-buttons">
+        <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
         <button class="category-buttons__button">Places</button>
         <button class="category-buttons__button">Rides</button>
         <button class="category-buttons__button">Things</button>
     </div>
-
-    <div class="main-section__search search-bar">
+<!-- La classe .hero-section__search est inutiles si .search-bar est déjà appliquée. -->
+    <div class="hero-section__search search-bar">
         <input class="search-bar__input" type="text" placeholder="Search for cars, houses and more">
-
         <select class="search-bar__select" name="city" id="city-select">
             <option value="">Select a city</option>
         </select>
-
+                <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
         <button class="search-bar__button" type="submit">Search</button>
     </div>
 </section>
@@ -58,6 +59,7 @@
     <section class="categories">
         <h2 class="categories__title">Browse From Top Categories</h2>
         <div class="categories__list">
+          <!-- Remplace la class .categories__item par .categories__list__item pour suivre la hiérarchie -->
             <div class="categories__item">
                 <img class="categories__icon" src="icons/holiday.png" alt="Holiday Rentals icon" width="24" height="24">
                 <span class="categories__label">Holiday Rentals</span>
@@ -88,11 +90,12 @@
     <!-- section liste villas -->
 <section class="listing" id="featured-listings">
   <h2 class="listing__title">Featured Listings</h2>
-
+<!-- Il te manque les boutons qui servent à trier les éléments par type -->
   <div class="listing__grid">
 
     <!-- Villa Carte 1 -->
     <div class="listing__card">
+      <!-- Il manque le badge 'For rent' -->
       <img class="listing__image" src="" alt="Luxury Villa ...." width="200">
       <p class="listing__price">85 000 LKR / month</p>
       <h3 class="listing__name">Luxury Villa in Baga Park</h3>
@@ -117,6 +120,7 @@
 
     <!-- villa carte 2 -->
     <div class="listing__card">
+        <!-- Il manque le badge 'For rent' -->
       <img class="listing__image" src="" alt="Luxury..." width="200">
       <p class="listing__price">85 000 LKR / month</p>
       <h3 class="listing__name">Luxury Villa in Baga Park</h3>
@@ -141,6 +145,7 @@
 
     <!--  villa carte 3 -->
     <div class="listing__card">
+        <!-- Il manque le badge 'For rent' -->
       <img class="listing__image" src="" alt="Luxury......." width="200">
       <p class="listing__price">85 000 LKR / month</p>
       <h3 class="listing__name">Luxury Villa in Baga Park</h3>
@@ -172,14 +177,17 @@
 <section class="site-stats" id="site-stats">
   <h2 class="site-stats__title">Insights and Performance Metrics</h2>
   <div class="site-stats__list">
+    <!-- Remplace la class .site-stats__item par .site-stats__list__item pour suivre la hiérarchie -->
     <div class="site-stats__item">
       <h3 class="site-stats__number">5000+</h3>
       <p class="site-stats__label">Total Rentals</p>
     </div>
+    <!-- Remplace la class .site-stats__item par .site-stats__list__item pour suivre la hiérarchie -->
     <div class="site-stats__item">
       <h3 class="site-stats__number">1000+</h3>
       <p class="site-stats__label">Active Listings</p>
     </div>
+    <!-- Remplace la class .site-stats__item par .site-stats__list__item pour suivre la hiérarchie -->
     <div class="site-stats__item">
       <h3 class="site-stats__number">30+</h3>
       <p class="site-stats__label">Partners</p>
@@ -190,29 +198,34 @@
 <!-- localisations mises en avant -->
 <section class="featured-locations" id="featured-locations">
   <h4 class="featured-locations__title">Featured Location</h4>
-
   <div class="featured-locations__list">
+    <!-- Il manque un item -->
     <div class="featured-locations__item">
+      <!-- Pas besoin de lien ici -->
       <a class="featured-locations__link" href="#Kandy">Kandy</a>
       <img class="featured-locations__image" src="" alt="Kandy" width="300">
     </div>
 
     <div class="featured-locations__item">
+      <!-- Pas besoin de lien ici -->
       <a class="featured-locations__link" href="#Anuradhapura">Anuradhapura</a>
       <img class="featured-locations__image" src="" alt="Anuradhapura" width="300">
     </div>
 
     <div class="featured-locations__item">
+      <!-- Pas besoin de lien ici -->
       <a class="featured-locations__link" href="#Badulla">Badulla</a>
       <img class="featured-locations__image" src="" alt="Badulla" width="300">
     </div>
 
     <div class="featured-locations__item">
+      <!-- Pas besoin de lien ici -->
       <a class="featured-locations__link" href="#Colombo">Colombo</a>
       <img class="featured-locations__image" src="" alt="Colombo" width="300">
     </div>
 
     <div class="featured-locations__item">
+      <!-- Pas besoin de lien ici -->
       <a class="featured-locations__link" href="#Kaluthara">Kaluthara</a>
       <img class="featured-locations__image" src="" alt="Kaluthara" width="300">
     </div>
@@ -224,7 +237,7 @@
 
 <section class="blog" id="blog">
   <h2 class="blog__title">Important Articles</h2>
-
+  <!-- La structure n'est pas bonne ici, si tu regarde bien la maquette il y a 2 colonnes : 1 article à gauche et 4 à droite -->
   <div class="blog__list">
 
     <!-- Article 1 -->
@@ -318,7 +331,9 @@
       Stay updated with the latest listings and offers.
     </p>
     <form class="footer__form" action="#" method="post">
+      <!-- Pas la peine de faire une classe différente pour les inputs. Fait plutôt une classe commune pour tous les inputs et une classe spécifique pour chaque variante d'input. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
       <input class="footer__input" type="email" name="email" placeholder="Your email" required>
+      <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
       <button class="footer__button" type="submit">Subscribe</button>
     </form>
   </div>
@@ -327,4 +342,4 @@
     &copy; 2024 Gidak. All rights reserved.
   </p>
 </footer>
-</body> 
+</body>
