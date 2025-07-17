@@ -12,7 +12,7 @@
     <!--  header -->
     <header class="header">
         <div class="header__logo">
-            <img src="" alt="Gidak Logo" width="100">
+            <img src="images/logo.webp" alt="Gidak Logo" width="100">
         </div>
         <nav class="header__nav">
             <a href="#home">Home</a>
@@ -24,62 +24,78 @@
         </nav>
         <div class="header__actions">
             <a href="#login" class="header__link">
-                <img class="header__icon" src="" alt="Sign in icon" width="16" height="16">
+                <img class="header__icon" src="images/user.svg" alt="Sign in icon" width="16" height="16">
                 Sign in
             </a>
-            <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
-            <a href="#register" class="header__link">Post listing</a>
+            <a href="#register" class="header__link btn btn--primary">
+                <img src="images/plus.svg" alt="Plus icon" class="header__icon" width="16" height="16"> Post listing
+            </a>
         </div>
+    </header>
 
     <!-- section principale -->
 
-    <section class="hero-section">
-    <h1 class="hero-section__title">Discover your perfect rental</h1>
-    <p class="hero-section__subtitle">Rent Cars, Houses, and Items in Just a Few Clicks</p>
-    <!-- La classe category-buttons est inutiles si .hero-section__categories est déjà appliquée. -->
-    <div class="hero-section__categories category-buttons">
-        <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
-        <button class="category-buttons__button">Places</button>
-        <button class="category-buttons__button">Rides</button>
-        <button class="category-buttons__button">Things</button>
-    </div>
-<!-- La classe .hero-section__search est inutiles si .search-bar est déjà appliquée. -->
-    <div class="hero-section__search search-bar">
-        <input class="search-bar__input" type="text" placeholder="Search for cars, houses and more">
-        <select class="search-bar__select" name="city" id="city-select">
-            <option value="">Select a city</option>
-        </select>
-                <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
-        <button class="search-bar__button" type="submit">Search</button>
-    </div>
-</section>
+    <section class="main-section">
+        <h1 class="main-section__title">Discover your perfect rental</h1>
+        <p class="main-section__subtitle">Rent Cars, Houses, and Items in Just a Few Clicks</p>
+
+        <div class="main-section__categories">
+            <button class="btn btn--category">Places</button>
+            <button class="btn btn--category">Rides</button>
+            <button class="btn btn--category">Things</button>
+        </div>
+
+        <div class="main-section__search search-bar">
+            <div class="champ-recherche">
+                <img src="images/loupe2.svg" alt="Search icon" class="icone icone--champ" width="16" height="16">
+                <input class="champ champ--texte" type="text" placeholder="Search for cars, houses and more">
+            </div>
+
+
+            <div class="selecteur-localisation">
+                <img src="images/pointGps.svg" alt="Icône GPS" class="icone icone--gps" width="16" height="16">
+                <select class="champ champ--select" name="ville" id="select-ville">
+                    <option value="">Sélectionner une localisation</option>
+                </select>
+                <img src="images/chevron-down.svg" alt="icone déroulereur" class="icone icone--chevron" width="12"
+                    height="12">
+            </div>
+
+
+            <button class="btn btn--search" type="submit">Search</button>
+            <img src="images/loupe.svg" alt="Search" style="height: 16px;">
+        </div>
+    </section>
 
 
     <!-- Section catégories -->
-    <section class="categories">
+    <section class="categories" id="categories">
         <h2 class="categories__title">Browse From Top Categories</h2>
+        <img src="images/TraitRouge.svg" alt="Séparateur décoratif" class="categories__separator"/>
         <div class="categories__list">
           <!-- Remplace la class .categories__item par .categories__list__item pour suivre la hiérarchie -->
             <div class="categories__item">
-                <img class="categories__icon" src="icons/holiday.png" alt="Holiday Rentals icon" width="24" height="24">
+                <img class="categories__icon" src="images/PouceLeve.svg" alt="Holiday Rentals icon" width="24"
+                    height="24">
                 <span class="categories__label">Holiday Rentals</span>
             </div>
             <div class="categories__item">
-                <img class="categories__icon" src="images/residential.png" alt="Residential Spaces icon" width="24"
+                <img class="categories__icon" src="images/home.svg" alt="Residential Spaces icon" width="24"
                     height="24">
                 <span class="categories__label">Residential Spaces</span>
             </div>
             <div class="categories__item">
-                <img class="categories__icon" src="images/event.png" alt="Event Spaces icon" width="24" height="24">
+                <img class="categories__icon" src="images/eventSpace.svg" alt="Event Spaces icon" width="24"
+                    height="24">
                 <span class="categories__label">Event Spaces</span>
             </div>
             <div class="categories__item">
-                <img class="categories__icon" src="images/commercial.png" alt="Commercial Properties icon" width="24"
+                <img class="categories__icon" src="images/dollar.svg" alt="Commercial Properties icon" width="24"
                     height="24">
                 <span class="categories__label">Commercial Properties</span>
             </div>
             <div class="categories__item">
-                <img class="categories__icon" src="images/more.png" alt="More icon" width="24" height="24">
+                <img class="categories__icon" src="images/3PetitsPoints.svg" alt="More icon" width="24" height="24">
                 <span class="categories__label">More</span>
             </div>
         </div>
@@ -88,258 +104,363 @@
 
 
     <!-- section liste villas -->
-<section class="listing" id="featured-listings">
-  <h2 class="listing__title">Featured Listings</h2>
-<!-- Il te manque les boutons qui servent à trier les éléments par type -->
-  <div class="listing__grid">
+    <section class="listing" id="featured-listings">
+        <h2 class="listing__title">Featured Listings</h2>
+        <img src="images/TraitRouge.svg" alt="Séparateur décoratif" class="listings__separator"/>
 
-    <!-- Villa Carte 1 -->
-    <div class="listing__card">
-      <!-- Il manque le badge 'For rent' -->
-      <img class="listing__image" src="" alt="Luxury Villa ...." width="200">
-      <p class="listing__price">85 000 LKR / month</p>
-      <h3 class="listing__name">Luxury Villa in Baga Park</h3>
-
-      <div class="listing__details">
-        <span class="listing__detail">3 bedrooms</span>
-        <span class="listing__detail">2 bathrooms</span>
-        <span class="listing__detail">2500 Square FT</span>
-      </div>
-
-      <div class="listing__seller">
-        <img class="listing__seller-photo" src="seller1.jpg" alt="Seller photo" width="40" height="40">
-        <div class="listing__seller-info">
-          <p class="listing__seller-name"><strong>Anne Liza</strong></p>
-          <p class="listing__seller-role">Property Seller</p>
+        <div class="listing__filters">
+            <button class="btn btn--filter">All items (5125)</button>
+            <button class="btn btn--filter">Residential Spaces (64)</button>
+            <button class="btn btn--filter">Sports Venues</button>
+            <button class="btn btn--filter">Meeting Spaces</button>
+            <button class="btn btn--filter">Vans & Buses</button>
+            <button class="btn btn--filter">Cars & SUVs</button>
+            <button class="btn btn--filter">Lorries & Industrial Vehicles</button>
+            <button class="btn btn--filter">&gt;</button>
         </div>
-        <button class="listing__like-button">
-          <img class="listing__like-icon" src="" alt="Like">
-        </button>
-      </div>
-    </div>
 
-    <!-- villa carte 2 -->
-    <div class="listing__card">
-        <!-- Il manque le badge 'For rent' -->
-      <img class="listing__image" src="" alt="Luxury..." width="200">
-      <p class="listing__price">85 000 LKR / month</p>
-      <h3 class="listing__name">Luxury Villa in Baga Park</h3>
+        <div class="listing__grid"></div>
 
-      <div class="listing__details">
-        <span class="listing__detail">3 bedrooms</span>
-        <span class="listing__detail">2 bathrooms</span>
-        <span class="listing__detail">2500 Square FT</span>
-      </div>
+        <!-- Villa Carte 1 -->
+        <div class="listing__card">
+            <div class="listing__badge">For Rent</div>
+            <img class="listing__image" src="images/villa1.webp" alt="Luxury Villa ...." width="200">
+            <p class="listing__price">85 000 LKR / month</p>
+            <h3 class="listing__name">Luxury Villa in Baga Park</h3>
 
-      <div class="listing__seller">
-        <img class="listing__seller-photo" src="seller2.jpg" alt="Seller photo" width="40" height="40">
-        <div class="listing__seller-info">
-          <p class="listing__seller-name"><strong>Anne Liza</strong></p>
-          <p class="listing__seller-role">Property Seller</p>
+            <div class="listing__details">
+                <span class="listing__detail">3 bedrooms</span>
+                <span class="listing__detail">2 bathrooms</span>
+                <span class="listing__detail">2500 Square FT</span>
+            </div>
+
+            <div class="listing__seller">
+                <img class="listing__seller-photo" src="images/vendeuse.webp" alt="Seller photo" width="40" height="40">
+                <div class="listing__seller-info">
+                    <p class="listing__seller-name"><strong>Anne Liza</strong></p>
+                    <p class="listing__seller-role">Property Seller</p>
+                </div>
+                <button class="listing__like-button">
+                    <img class="listing__like-icon" src="images/coeur.svg" alt="Like">
+                </button>
+            </div>
         </div>
-        <button class="listing__like-button">
-          <img class="listing__like-icon" src="heart-icon.png" alt="Like">
-        </button>
-      </div>
-    </div>
 
-    <!--  villa carte 3 -->
-    <div class="listing__card">
-        <!-- Il manque le badge 'For rent' -->
-      <img class="listing__image" src="" alt="Luxury......." width="200">
-      <p class="listing__price">85 000 LKR / month</p>
-      <h3 class="listing__name">Luxury Villa in Baga Park</h3>
+        <!-- villa carte 2 -->
+        <div class="listing__card">
+            <div class="listing__badge">For Rent</div>
+            <img class="listing__image" src="images/villa2.webp" alt="Luxury..." width="200">
+            <p class="listing__price">85 000 LKR / month</p>
+            <h3 class="listing__name">Luxury Villa in Baga Park</h3>
 
-      <div class="listing__details">
-        <span class="listing__detail">3 bedrooms</span>
-        <span class="listing__detail">2 bathrooms</span>
-        <span class="listing__detail">2500 Square FT</span>
-      </div>
+            <div class="listing__details">
+                <span class="listing__detail">3 bedrooms</span>
+                <span class="listing__detail">2 bathrooms</span>
+                <span class="listing__detail">2500 Square FT</span>
+            </div>
 
-      <div class="listing__seller">
-        <img class="listing__seller-photo" src="seller3.jpg" alt="Seller photo" width="40" height="40">
-        <div class="listing__seller-info">
-          <p class="listing__seller-name"><strong>Anne Liza</strong></p>
-          <p class="listing__seller-role">Property Seller</p>
+            <div class="listing__seller">
+                <img class="listing__seller-photo" src="images/vendeuse.webp" alt="Seller photo" width="40" height="40">
+                <div class="listing__seller-info">
+                    <p class="listing__seller-name"><strong>Anne Liza</strong></p>
+                    <p class="listing__seller-role">Property Seller</p>
+                </div>
+                <button class="listing__like-button">
+                    <img class="listing__like-icon" src="images/coeur.svg" alt="Like">
+                </button>
+            </div>
         </div>
-        <button class="listing__like-button">
-          <img class="listing__like-icon" src="heart-icon.png" alt="Like">
-        </button>
-      </div>
-    </div>
 
-  </div>
-</section>
+        <!--  villa carte 3 -->
+        <div class="listing__card">
+            <div class="listing__badge">For Rent</div>
+            <img class="listing__image" src="images/villa2.webp" alt="Luxury......." width="200">
+            <p class="listing__price">85 000 LKR / month</p>
+            <h3 class="listing__name">Luxury Villa in Baga Park</h3>
+
+            <div class="listing__details">
+                <span class="listing__detail">3 bedrooms</span>
+                <span class="listing__detail">2 bathrooms</span>
+                <span class="listing__detail">2500 Square FT</span>
+            </div>
+
+            <div class="listing__seller">
+                <img class="listing__seller-photo" src="images/vendeuse.webp" alt="Seller photo" width="40" height="40">
+                <div class="listing__seller-info">
+                    <p class="listing__seller-name"><strong>Anne Liza</strong></p>
+                    <p class="listing__seller-role">Property Seller</p>
+                </div>
+                <button class="listing__like-button">
+                    <img class="listing__like-icon" src="images/coeur.svg" alt="Like">
+                </button>
+            </div>
+        </div>
+
+        <!-- Villa Carte 4 -->
+        <div class="listing__card">
+            <div class="listing__badge">For Rent</div>
+            <img class="listing__image" src="images/villa1.webp" alt="Luxury Villa ...." width="200">
+            <p class="listing__price">85 000 LKR / month</p>
+            <h3 class="listing__name">Luxury Villa in Baga Park</h3>
+
+            <div class="listing__details">
+                <span class="listing__detail">3 bedrooms</span>
+                <span class="listing__detail">2 bathrooms</span>
+                <span class="listing__detail">2500 Square FT</span>
+            </div>
+
+            <div class="listing__seller">
+                <img class="listing__seller-photo" src="images/vendeuse.webp" alt="Seller photo" width="40" height="40">
+                <div class="listing__seller-info">
+                    <p class="listing__seller-name"><strong>Anne Liza</strong></p>
+                    <p class="listing__seller-role">Property Seller</p>
+                </div>
+                <button class="listing__like-button">
+                    <img class="listing__like-icon" src="images/coeur.svg" alt="Like">
+                </button>
+            </div>
+        </div>
+
+        <!-- villa carte 5 -->
+        <div class="listing__card">
+            <div class="listing__badge">For Rent</div>
+            <img class="listing__image" src="images/villa2.webp" alt="Luxury..." width="200">
+            <p class="listing__price">85 000 LKR / month</p>
+            <h3 class="listing__name">Luxury Villa in Baga Park</h3>
+
+            <div class="listing__details">
+                <span class="listing__detail">3 bedrooms</span>
+                <span class="listing__detail">2 bathrooms</span>
+                <span class="listing__detail">2500 Square FT</span>
+            </div>
+
+            <div class="listing__seller">
+                <img class="listing__seller-photo" src="images/vendeuse.webp" alt="Seller photo" width="40" height="40">
+                <div class="listing__seller-info">
+                    <p class="listing__seller-name"><strong>Anne Liza</strong></p>
+                    <p class="listing__seller-role">Property Seller</p>
+                </div>
+                <button class="listing__like-button">
+                    <img class="listing__like-icon" src="images/coeur.svg" alt="Like">
+                </button>
+            </div>
+        </div>
+
+        <!--  villa carte 6 -->
+        <div class="listing__card">
+            <div class="listing__badge">For Rent</div>
+            <img class="listing__image" src="images/villa2.webp" alt="Luxury......." width="200">
+            <p class="listing__price">85 000 LKR / month</p>
+            <h3 class="listing__name">Luxury Villa in Baga Park</h3>
+
+            <div class="listing__details">
+                <span class="listing__detail">3 bedrooms</span>
+                <span class="listing__detail">2 bathrooms</span>
+                <span class="listing__detail">2500 Square FT</span>
+            </div>
+
+            <div class="listing__seller">
+                <img class="listing__seller-photo" src="images/vendeuse.webp" alt="Seller photo" width="40" height="40">
+                <div class="listing__seller-info">
+                    <p class="listing__seller-name"><strong>Anne Liza</strong></p>
+                    <p class="listing__seller-role">Property Seller</p>
+                </div>
+                <button class="listing__like-button">
+                    <img class="listing__like-icon" src="images/coeur.svg" alt="Like">
+                </button>
+            </div>
+        </div>
+
+        <button class="btn btn--load-more">Load More</button>
+
+
+        </div>
+    </section>
 
 
 
     <!-- stat du site -->
-<section class="site-stats" id="site-stats">
-  <h2 class="site-stats__title">Insights and Performance Metrics</h2>
-  <div class="site-stats__list">
-    <!-- Remplace la class .site-stats__item par .site-stats__list__item pour suivre la hiérarchie -->
-    <div class="site-stats__item">
-      <h3 class="site-stats__number">5000+</h3>
-      <p class="site-stats__label">Total Rentals</p>
-    </div>
-    <!-- Remplace la class .site-stats__item par .site-stats__list__item pour suivre la hiérarchie -->
-    <div class="site-stats__item">
-      <h3 class="site-stats__number">1000+</h3>
-      <p class="site-stats__label">Active Listings</p>
-    </div>
-    <!-- Remplace la class .site-stats__item par .site-stats__list__item pour suivre la hiérarchie -->
-    <div class="site-stats__item">
-      <h3 class="site-stats__number">30+</h3>
-      <p class="site-stats__label">Partners</p>
-    </div>
-  </div>
-</section>
+    <section class="site-stats" id="site-stats">
+        <h2 class="site-stats__title">Insights and Performance Metrics</h2>
+        <div class="site-stats__list">
+            <div class="site-stats__list-item">
+                <h3 class="site-stats__number">5000+</h3>
+                <p class="site-stats__label">Total Rentals</p>
+            </div>
+            <div class="site-stats__list-item">
+                <h3 class="site-stats__number">1000+</h3>
+                <p class="site-stats__label">Active Listings</p>
+            </div>
+            <div class="site-stats__list-item">
+                <h3 class="site-stats__number">30+</h3>
+                <p class="site-stats__label">Partners</p>
+            </div>
+        </div>
+    </section>
 
-<!-- localisations mises en avant -->
-<section class="featured-locations" id="featured-locations">
-  <h4 class="featured-locations__title">Featured Location</h4>
-  <div class="featured-locations__list">
-    <!-- Il manque un item -->
-    <div class="featured-locations__item">
-      <!-- Pas besoin de lien ici -->
-      <a class="featured-locations__link" href="#Kandy">Kandy</a>
-      <img class="featured-locations__image" src="" alt="Kandy" width="300">
-    </div>
+    <!-- localisations mises en avant -->
+    <section class="featured-locations" id="featured-locations">
+        <h2 class="featured-locations__title">Featured Location</h2>
 
-    <div class="featured-locations__item">
-      <!-- Pas besoin de lien ici -->
-      <a class="featured-locations__link" href="#Anuradhapura">Anuradhapura</a>
-      <img class="featured-locations__image" src="" alt="Anuradhapura" width="300">
-    </div>
+        <img src="images/TraitRouge.svg" alt="Séparateur décoratif" class="featured-locations__separator"/>
 
-    <div class="featured-locations__item">
-      <!-- Pas besoin de lien ici -->
-      <a class="featured-locations__link" href="#Badulla">Badulla</a>
-      <img class="featured-locations__image" src="" alt="Badulla" width="300">
-    </div>
+        <div class="featured-locations__list">
+            <div class="featured-locations__item">
+                <p class="featured-locations__label">Kandy</p>
+                <img class="featured-locations__image" src="images/lieu4.webp" alt="Kandy" width="300">
+            </div>
 
-    <div class="featured-locations__item">
-      <!-- Pas besoin de lien ici -->
-      <a class="featured-locations__link" href="#Colombo">Colombo</a>
-      <img class="featured-locations__image" src="" alt="Colombo" width="300">
-    </div>
+            <div class="featured-locations__item">
+                <p class="featured-locations__label">Anuradhapura</p>
+                <img class="featured-locations__image" src="images/lieu1.webp" alt="Anuradhapura" width="300">
+            </div>
 
-    <div class="featured-locations__item">
-      <!-- Pas besoin de lien ici -->
-      <a class="featured-locations__link" href="#Kaluthara">Kaluthara</a>
-      <img class="featured-locations__image" src="" alt="Kaluthara" width="300">
-    </div>
-  </div>
-</section>
+            <div class="featured-locations__item">
+                <p class="featured-locations__label">Jaffna</p>
+                <img class="featured-locations__image" src="images/lieu7Verdure.webp" alt="Jaffna" width="300">
+            </div>
 
+            <div class="featured-locations__item">
+                <p class="featured-locations__label">Badulla</p>
+                <img class="featured-locations__image" src="images/lieu3train.webp" alt="Badulla" width="300">
+            </div>
 
-<!-- section blog avec articles 1 à 4 -->
+        </div>
 
-<section class="blog" id="blog">
-  <h2 class="blog__title">Important Articles</h2>
-  <!-- La structure n'est pas bonne ici, si tu regarde bien la maquette il y a 2 colonnes : 1 article à gauche et 4 à droite -->
-  <div class="blog__list">
+        <div class="featured-locations__item">
+            <p class="featured-locations__label">Colombo</p>
+            <img class="featured-locations__image" src="images/lieu3.webp" alt="Colombo" width="300">
+        </div>
 
-    <!-- Article 1 -->
-    <article class="blog__item--1">
-      <img class="blog__image" src="" alt="Article 1">
-      <div class="blog__date">May 7, 2023</div>
-      <div class="blog__content">
-        <h3 class="blog__headline">Top Tips for Finding the Perfect Rental</h3>
-        <p class="blog__summary">Lorem ipsum dolor sit amet...</p>
-      </div>
-    </article>
-
-    <!-- Article 2 -->
-    <article class="blog__item--2">
-      <img class="blog__image" src="" alt="Article 2">
-      <div class="blog__date">May 7, 2023</div>
-      <div class="blog__content">
-        <h3 class="blog__headline">Car Rental Hacks for a Smooth Journey</h3>
-        <p class="blog__summary">Quick tips for better experience...</p>
-      </div>
-    </article>
-
-    <!-- Article 3 -->
-    <article class="blog__item--3">
-      <img class="blog__image" src="" alt="Article 3">
-      <div class="blog__date">May 7, 2023</div>
-      <div class="blog__content">
-        <h3 class="blog__headline">Managing Your Rental Home</h3>
-        <p class="blog__summary">A comprehensive guide</p>
-      </div>
-    </article>
-
-    <!-- Article 4 -->
-    <article class="blog__item--4">
-      <img class="blog__image" src="" alt="Article 4">
-      <div class="blog__date">May 7, 2023</div>
-      <div class="blog__content">
-        <h3 class="blog__headline">Navigate the Rental Market</h3>
-        <p class="blog__summary">Insights for new renters</p>
-      </div>
-    </article>
-  </div>
-</section>
+        <div class="featured-locations__item">
+            <p class="featured-locations__label">Kaluthara</p>
+            <img class="featured-locations__image" src="images/lieu6TrainBleu.webp" alt="Gampaha" width="300">
+        </div>
+        </div>
+    </section>
 
 
+    <!-- section blog avec articles 1 à 4 -->
 
-<!-- Footer -->
-<footer class="footer" id="footer">
-  <div class="footer__about">
-    <img class="footer__logo" src="" alt="Gidak Logo" width="100">
-    <p class="footer__description">
-      The Sri Lanka's first & largest platform designed to create
-      an online marketplace exclusively for RENT.
-    </p>
-  </div>
+    <section class="blog" id="blog">
+        <h2 class="blog__title">Important Articles</h2>
+        <img src="images/TraitRouge.svg" alt="Séparateur décoratif" class="blog__separator"/>
 
-  <div class="footer__social social-icons">
-    <a class="social-icons__link" href="#" aria-label="Instagram">
-      <img class="social-icons__icon" src="instagram-icon.png" alt="Instagram" width="24" height="24">
-    </a>
-    <a class="social-icons__link" href="#" aria-label="Twitter">
-      <img class="social-icons__icon" src="twitter-icon.png" alt="Twitter" width="24" height="24">
-    </a>
-    <a class="social-icons__link" href="#" aria-label="YouTube">
-      <img class="social-icons__icon" src="youtube-icon.png" alt="YouTube" width="24" height="24">
-    </a>
-    <a class="social-icons__link" href="#" aria-label="Facebook">
-      <img class="social-icons__icon" src="facebook-icon.png" alt="Facebook" width="24" height="24">
-    </a>
-    <a class="social-icons__link" href="#" aria-label="LinkedIn">
-      <img class="social-icons__icon" src="linkedin-icon.png" alt="LinkedIn" width="24" height="24">
-    </a>
-  </div>
+        <div class="blog__main-article">
 
-  <div class="footer__nav">
-    <h4 class="footer__title">Navigation</h4>
-    <a class="footer__link" href="#home">Home</a>
-    <a class="footer__link" href="#about">About</a>
-    <a class="footer__link" href="#contact">Contact</a>
-  </div>
+            <!-- Article 1 -->
+            <article class="blog__item--1">
+                <img class="blog__image" src="images/familleSalon.webp" alt="Article 1">
+                <div class="blog__date">February 4, 2023</div>
+                <div class="blog__content">
+                    <h3 class="blog__headline">Top Tips for Finding the Perfect Rental</h3>
+                    <p class="blog__summary">Discover expert advice on how to find the ideal rental property that meets
+                        your needs and budget.</p>
+                </div>
+            </article>
 
-  <div class="footer__help">
-    <h4 class="footer__heading">Help</h4>
-    <a class="footer__link" href="#faq">FAQ</a>
-    <a class="footer__link" href="#contact">Contact Us</a>
-  </div>
+            <!-- Article 2 -->
+            <article class="blog__item--2">
+                <img class="blog__image" src="images/lieu2.webp" alt="Article 2">
+                <div class="blog__date">May 7, 2023</div>
+                <div class="blog__content">
+                    <h3 class="blog__headline">Car Rental Hacks for a Smooth Journey</h3>
+                    <p class="blog__summary">Learn insider tips for getting the best deals and making the most of your
+                        rental car experience.</p>
+                </div>
+            </article>
 
-  <div class="footer__newsletter">
-    <h4 class="footer__title">Subscribe to our newsletter</h4>
-    <p class="footer__newsletter-description">
-      Stay updated with the latest listings and offers.
-    </p>
-    <form class="footer__form" action="#" method="post">
-      <!-- Pas la peine de faire une classe différente pour les inputs. Fait plutôt une classe commune pour tous les inputs et une classe spécifique pour chaque variante d'input. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
-      <input class="footer__input" type="email" name="email" placeholder="Your email" required>
-      <!-- Pas la peine de faire une classe différente pour les boutons. Fait plutôt une classe commune pour tous les boutons et une classe spécifique pour chaque variante de bouton. Regarde les exemples qui sont donnés dans les articles sur le BEM et OOCSS. -->
-      <button class="footer__button" type="submit">Subscribe</button>
-    </form>
-  </div>
+            <!-- Article 3 -->
+            <article class="blog__item--3">
+                <img class="blog__image" src="images/bureau.webp" alt="Article 3">
+                <div class="blog__date">April 25, 2023</div>
+                <div class="blog__content">
+                    <h3 class="blog__headline">Managing Your Rental Items : A Comprehensive Guide</h3>
+                    <p class="blog__summary">Get valuable insights on how to effectively manage and maintain your rented
+                        items.</p>
+                </div>
+            </article>
 
-  <p class="footer__copyright">
-    &copy; 2024 Gidak. All rights reserved.
-  </p>
-</footer>
+            <!-- Article 4 -->
+            <article class="blog__item--4">
+                <img class="blog__image" src="images/lieu5.webp" alt="Article 4">
+                <div class="blog__date">January 2, 2023</div>
+                <div class="blog__content">
+                    <h3 class="blog__headline">Navigating the Rental Market : Insights for New Renters</h3>
+                    <p class="blog__summary">Explore key considerations and useful tips for individuals new to the
+                        rental market.</p>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="blog__item--5">
+                <img class="blog__image" src="images/planning.webp" alt="Article 5">
+                <div class="blog__date">April 7, 2023</div>
+                <div class="blog__content">
+                    <h3 class="blog__headline">Maximizing Returns: Strategy for Rental Property Owners</h3>
+                    <p class="blog__summary">Learn strategies to optimize return on investments for your rental
+                        property.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer__about">
+            <img class="footer__logo" src="images/logo.webp" alt="Gidak Logo" width="100">
+            <p class="footer__description">
+                The Sri Lanka's first & largest platform designed to create
+                an online marketplace exclusively for RENT.
+            </p>
+        </div>
+
+        <div class="footer__social social-icons">
+            <a class="social-icons__link" href="#" aria-label="Instagram">
+                <img class="social-icons__icon" src="images/insta.webp" alt="Instagram" width="24" height="24">
+            </a>
+            <a class="social-icons__link" href="#" aria-label="Twitter">
+                <img class="social-icons__icon" src="images/twitter.webp" alt="Twitter" width="24" height="24">
+            </a>
+            <a class="social-icons__link" href="#" aria-label="YouTube">
+                <img class="social-icons__icon" src="images/youtube.webp" alt="YouTube" width="24" height="24">
+            </a>
+            <a class="social-icons__link" href="#" aria-label="Facebook">
+                <img class="social-icons__icon" src="images/fb.webp" alt="Facebook" width="24" height="24">
+            </a>
+            <a class="social-icons__link" href="#" aria-label="LinkedIn">
+                <img class="social-icons__icon" src="images/linkedin.webp" alt="LinkedIn" width="24" height="24">
+            </a>
+        </div>
+
+        <div class="footer__nav">
+            <h4 class="footer__title">Navigation</h4>
+            <a class="footer__link" href="#home">Home</a>
+            <a class="footer__link" href="#about">About</a>
+            <a class="footer__link" href="#contact">Contact</a>
+        </div>
+
+        <div class="footer__help">
+            <h4 class="footer__heading">Help</h4>
+            <a class="footer__link" href="#faq">FAQ</a>
+            <a class="footer__link" href="#contact">Contact Us</a>
+        </div>
+
+        <div class="footer__newsletter">
+            <h4 class="footer__title">Subscribe to our newsletter</h4>
+            <p class="footer__newsletter-description">
+                Stay updated with the latest listings and offers.
+            </p>
+            <form class="footer__form" action="#" method="post">
+                <input class="input input--footer" type="email" name="email" placeholder="Your email" required>
+                <button class="btn btn--footer" type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <p class="footer__copyright">
+            &copy; 2024 Gidak. All rights reserved.
+        </p>
+    </footer>
 </body>
