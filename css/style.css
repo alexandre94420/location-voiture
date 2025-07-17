@@ -1,0 +1,204 @@
+/*  HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+
+
+  
+  padding: 1rem 2rem;
+  background-color: #fff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+
+  top: 0;
+  z-index: 1000;
+}
+
+.header__logo img {
+  height: auto;
+  max-width: 100px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: #000; 
+  font-weight: 500;
+
+
+  transition: color 0.3s ease;
+}
+
+.header__nav a:hover {
+  color: #e60023; 
+}
+
+.header__actions {
+  display: flex;
+
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+
+  text-decoration: none;
+  color: #000; 
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header__link:hover {
+  color: #e60023;
+}
+
+.header__icon {
+  width: 16px;
+
+
+  height: 16px;
+}
+
+/* bouton principal "post listing" */
+.btn--primary {
+  background-color: #e60023;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+
+
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  transition: background-color 0.3s ease;
+}
+
+.btn--primary:hover {
+  background-color: #c5001e;
+}
+
+
+/* SECTION PRINCIPALE  */
+
+
+.main-section {
+    background-image: url('../images/menu.webp');
+    background-size: 160%;
+    background-position: center 18%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+    padding: 120px 20px 60px;
+    min-height: 100vh;
+    color: #000;
+}
+
+/* titre principal */
+.main-section__title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: inherit;
+}
+
+/* Partie titre "perfect" en rouge */
+.main-section__title span.highlight {
+    color: #f43f5e;
+}
+
+/* sous-titre */
+.main-section__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+/* boutons catégories */
+.main-section__categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 60px; /* Pour créer un espace avant la barre de recherche */
+}
+
+.btn--category {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+/* Premier bouton rouge */
+.btn--category:first-child {
+    background-color: #f43f5e;
+    color: white;
+}
+
+/* Les deux autres blancs */
+.btn--category:nth-child(2),
+.btn--category:nth-child(3) {
+    background-color: white;
+    color: black;
+}
+
+/* === Barre de recherche, dans le flux normal === */
+.main-section__search {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 15px 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 40px; /* Ajuste ici si tu veux qu'elle soit pile à hauteur du gosse */
+}
+
+/* Champs */
+.champ--texte,
+.champ--select {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Placeholder */
+.champ--texte::placeholder {
+    color: #aaa;
+}
+
+/* Bouton de recherche */
+.btn--search {
+    background-color: #f43f5e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
