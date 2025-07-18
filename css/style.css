@@ -465,3 +465,72 @@ body {
 .site-stats__label {
   font-size: 12px;
 }
+
+/* ===  la section Featured Locations ========================================== */
+
+.featured-locations__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.featured-locations__separator {
+ margin-bottom: 30px; /* espace sous le trait rouge */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-locations__list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.featured-locations__item--large {
+  width: 382px;
+  height: 400px; /* plus grand en hauteur */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.featured-locations__middle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 180px); /* hauteur plus petite que les grandes images */
+  gap: 20px;
+  border-radius: 12px;
+  align-content: center; /* centre verticalement le bloc si besoin */
+}
+
+.featured-locations__item--small {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 378px;
+  height: 180px; /* plus petite hauteur */
+  flex-shrink: 0;
+}
+
+.featured-locations__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.featured-locations__label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  pointer-events: none;
+}
