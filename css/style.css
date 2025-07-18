@@ -1,3 +1,7 @@
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 /*  HEADER */
 
 .header {
@@ -151,20 +155,20 @@
     cursor: pointer;
 }
 
-/* Premier bouton rouge */
+/* premier bouton rouge */
 .btn--category:first-child {
     background-color: #f43f5e;
     color: white;
 }
 
-/* Les deux autres blancs */
+/* les deux autres blanc*/
 .btn--category:nth-child(2),
 .btn--category:nth-child(3) {
     background-color: white;
     color: black;
 }
 
-/* === Barre de recherche, dans le flux normal === */
+/* barre de recherche  */
 .main-section__search {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 30px;
@@ -177,7 +181,7 @@
     margin-top: 40px; /* Ajuste ici si tu veux qu'elle soit pile à hauteur du gosse */
 }
 
-/* Champs */
+/* champs */
 .champ--texte,
 .champ--select {
     border: 1px solid #ccc;
@@ -187,12 +191,12 @@
     color: #000;
 }
 
-/* Placeholder */
+/* place holder */
 .champ--texte::placeholder {
     color: #aaa;
 }
 
-/* Bouton de recherche */
+/* bouton de recherche */
 .btn--search {
     background-color: #f43f5e;
     color: white;
@@ -202,3 +206,59 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+/* section catégories ======================================== */
+
+.categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* titre principal de la section */
+.categories__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* trait rouge decoratif sous le titre */
+.categories__separator {
+  margin-bottom: 24px;
+}
+
+/* list des boutons de catégories */
+.categories__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+  gap: 16px; /* Espacement entre les boutons */
+}
+
+/* element unique  des  bouton de catégorie */
+.categories__item {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.categories__item:hover {
+  background-color: #e0e0e0;
+}
+
+/* icône à gauche du bouton */
+.categories__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* texte du bouton */
+.categories__label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
