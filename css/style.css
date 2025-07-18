@@ -262,3 +262,159 @@ body {
   font-weight: 500;
 }
 
+/* ==================== Section Liste Villas ==================== */
+
+.listing {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titre */
+.listing__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Séparateur décoratif */
+.listings__separator {
+  display: block;
+  margin: 0 auto 32px auto;
+}
+
+/* ===== Boutons de filtres ===== */
+.listing__filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: nowrap; /* 1 ligne seulement */
+  overflow-x: auto; /* au cas où ça déborde */
+}
+
+/* Boutons style simple */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #e5e5e5;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--filter:hover {
+  background-color: #dcdcdc;
+}
+
+/* ===== Grille de villas 3x2 ===== */
+.listing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  gap: 24px;
+}
+
+/* Carte villa */
+.listing__card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Badge */
+.listing__badge {
+  background-color: #e74c3c;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+/* Image */
+.listing__image {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Prix */
+.listing__price {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Nom villa */
+.listing__name {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* Détails */
+.listing__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.listing__detail {
+  background-color: #eee;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Bloc vendeur */
+.listing__seller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+/* Photo vendeur */
+.listing__seller-photo {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Infos vendeur */
+.listing__seller-info {
+  flex-grow: 1;
+}
+
+.listing__seller-name {
+  margin: 0;
+  font-size: 14px;
+}
+
+.listing__seller-role {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+/* Bouton like */
+.listing__like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.listing__like-icon {
+  width: 20px;
+  height: 20px;
+}
