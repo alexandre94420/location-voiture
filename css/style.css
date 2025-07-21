@@ -456,47 +456,51 @@ body {
 
 .site-stats {
     background-color: #f0f0f0;
-    padding: 20px;
+    padding:  40px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 180px;
 }
 
 /* titre à gauche noir */
 .site-stats__title {
     color: black;
-    font-size: 22px;
+    font-size: 28px;
     flex: 1;
 }
 
 /* conteneur des blocs de stats en noir  */
 .site-stats__list {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
 /* chaque carré noir */
 .site-stats__list-item {
     background-color: black;
     color: white;
-    padding: 15px;
+    padding: 25px;
     border-radius: 10px;
     /* simple mais pas 6px */
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* dans le carré */
 .site-stats__number {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* petit sous texte dans carré */
 .site-stats__label {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* ===  la section Featured Locations ========================================== */
@@ -511,7 +515,7 @@ body {
 .featured-locations__separator {
     margin-bottom: 30px;
 
-    
+
     /* espace sous le trait rouge */
     display: block;
     margin-left: auto;
