@@ -55,15 +55,8 @@ body {
 }
 
 .header__link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-
-  text-decoration: none;
-  color: #000; 
-  font-weight: 500;
-  transition: color 0.3s ease;
+color: #e60023 !important; /* couleur rouge forcée */
+text-decoration: none !important; /* enlever le soulignement */
 }
 
 .header__link:hover {
@@ -79,22 +72,22 @@ body {
 
 /* bouton principal "post listing" */
 .btn--primary {
-  background-color: #e60023;
-  color: #fff;
-  padding: 0.5rem 1rem;
+ color: #e60023 !important; /* texte rouge tout le temps */
+  background-color: transparent; /* Si tu veux fond transparent */
   border: none;
-
-
+  padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: 600;
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-
   transition: background-color 0.3s ease;
 }
 
+.btn--primary {
+  background-color: #e60023 !important;
+  color: #fff !important;
+}
 .btn--primary:hover {
   background-color: #c5001e;
 }
