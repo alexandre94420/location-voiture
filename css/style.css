@@ -1,95 +1,100 @@
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /*  HEADER */
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 
 
 
-  
-  padding: 1rem 2rem;
-  background-color: #fff; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  position: sticky;
 
-  top: 0;
-  z-index: 1000;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+
+    top: 0;
+    z-index: 1000;
 }
 
 .header__logo img {
-  height: auto;
-  max-width: 100px;
+    height: auto;
+    max-width: 100px;
 }
 
 .header__nav {
-  display: flex;
-  gap: 1.5rem;
-  flex-grow: 1;
-  justify-content: center;
+    display: flex;
+    gap: 1.5rem;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .header__nav a {
-  text-decoration: none;
-  color: #000; 
-  font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 
 
-  transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .header__nav a:hover {
-  color: #e60023; 
+    color: #e60023;
 }
 
 .header__actions {
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  gap: 1rem;
+    align-items: center;
+    gap: 1rem;
 }
 
 .header__link {
-color: #e60023 !important; /* couleur rouge forcée */
-text-decoration: none !important; /* enlever le soulignement */
+    color: #e60023 !important;
+    /* couleur rouge forcée */
+    text-decoration: none !important;
+    /* enlever le soulignement */
 }
 
 .header__link:hover {
-  color: #e60023;
+    color: #e60023;
 }
 
 .header__icon {
-  width: 16px;
+    width: 16px;
 
 
-  height: 16px;
+    height: 16px;
 }
 
 /* bouton principal "post listing" */
 .btn--primary {
- color: #e60023 !important; /* texte rouge tout le temps */
-  background-color: transparent; /* Si tu veux fond transparent */
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background-color 0.3s ease;
+    color: #e60023 !important;
+    /* texte rouge tout le temps */
+    background-color: transparent;
+    /* Si tu veux fond transparent */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .btn--primary {
-  background-color: #e60023 !important;
-  color: #fff !important;
+    background-color: #e60023 !important;
+    color: #fff !important;
 }
+
 .btn--primary:hover {
-  background-color: #c5001e;
+    background-color: #c5001e;
 }
 
 
@@ -137,7 +142,8 @@ text-decoration: none !important; /* enlever le soulignement */
 .main-section__categories {
     display: flex;
     gap: 10px;
-    margin-bottom: 60px; /* Pour créer un espace avant la barre de recherche */
+    margin-bottom: 60px;
+    /* Pour créer un espace avant la barre de recherche */
 }
 
 .btn--category {
@@ -171,7 +177,8 @@ text-decoration: none !important; /* enlever le soulignement */
     flex-wrap: wrap;
     justify-content: center;
     z-index: 1;
-    margin-top: 40px; /* Ajuste ici si tu veux qu'elle soit pile à hauteur du gosse */
+    margin-top: 40px;
+    /* Ajuste ici si tu veux qu'elle soit pile à hauteur du gosse */
 }
 
 /* champs */
@@ -203,344 +210,371 @@ text-decoration: none !important; /* enlever le soulignement */
 /* section catégories ======================================== */
 
 .categories {
-  padding: 40px 20px;
-  text-align: center;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 /* titre principal de la section */
 .categories__title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 /* trait rouge decoratif sous le titre */
 .categories__separator {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 /* list des boutons de catégories */
 .categories__list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
-  gap: 16px; /* Espacement entre les boutons */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Pour s'adapter aux petits écrans */
+    gap: 16px;
+    /* Espacement entre les boutons */
 }
 
 /* element unique  des  bouton de catégorie */
 .categories__item {
-  display: flex;
-  align-items: center;
-  background-color: #f5f5f5;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .categories__item:hover {
-  background-color: #e0e0e0;
+    background-color: #e0e0e0;
 }
 
 /* icône à gauche du bouton */
 .categories__icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
 /* texte du bouton */
 .categories__label {
-  font-size: 16px;
-  font-weight: 500;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* ==================== Section Liste Villas ==================== */
 
 .listing {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Titre */
 .listing__title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
 /* Séparateur décoratif */
 .listings__separator {
-  display: block;
-  margin: 0 auto 32px auto;
+    display: block;
+    margin: 0 auto 32px auto;
 }
 
 /* ===== Boutons de filtres ===== */
 .listing__filters {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
-  flex-wrap: nowrap; /* 1 ligne seulement */
-  overflow-x: auto; /* au cas où ça déborde */
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: nowrap;
+    /* 1 ligne seulement */
+    overflow-x: auto;
+    /* au cas où ça déborde */
 }
 
 /* Boutons style simple */
 .btn {
-  padding: 8px 16px;
-  border: none;
-  background-color: #e5e5e5;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  white-space: nowrap;
+    padding: 8px 16px;
+    border: none;
+    background-color: #e5e5e5;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn--filter:hover {
-  background-color: #dcdcdc;
+    background-color: #dcdcdc;
 }
 
 /* style specifique pour "All items" */
 .btn--filter1 {
-  background-color: #e53935;
-  color: white;
-  border-radius: 20px;       
+    background-color: #e53935;
+    color: white;
+    border-radius: 20px;
 }
 
 /* arrondi les coins pour tous les boutons */
 .btn,
 .btn--filter,
 .btn--filter1 {
-  border-radius: 20px;      
+    border-radius: 20px;
 }
 
 
 /* ===== Grille de villas 3x2 ===== */
 .listing__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-  gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes */
+    gap: 24px;
 }
 
 /* Carte villa */
 .listing__card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Badge */
 .listing__badge {
-  background-color: #e74c3c;
-  color: white;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  align-self: flex-start;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #27ae60;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Image */
+
+
 .listing__image {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 12px;
+    width: 100%;
+    display: block;
+    border-radius: 6px;
 }
 
 /* Prix */
 .listing__price {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
 /* Nom villa */
 .listing__name {
-  font-size: 18px;
-  margin-bottom: 12px;
+    font-size: 18px;
+    margin-bottom: 12px;
 }
 
 /* Détails */
 .listing__details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
 }
 
 .listing__detail {
-  background-color: #eee;
-  padding: 4px 8px;
-  border-radius: 4px;
+    background-color: #eee;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
+
+.listing__media {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
 
 /* Bloc vendeur */
 .listing__seller {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
 }
 
 /* Photo vendeur */
 .listing__seller-photo {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  margin-right: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 /* Infos vendeur */
 .listing__seller-info {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .listing__seller-name {
-  margin: 0;
-  font-size: 14px;
+    margin: 0;
+    font-size: 14px;
 }
 
 .listing__seller-role {
-  font-size: 12px;
-  color: #777;
-  margin: 0;
+    font-size: 12px;
+    color: #777;
+    margin: 0;
 }
 
 /* Bouton like */
 .listing__like-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
 }
 
 .listing__like-icon {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 /* section statistiques */
 
 
 .site-stats {
-  background-color: #f0f0f0;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* titre à gauche noir */
 .site-stats__title {
-  color: black;
-  font-size: 22px;
-  flex: 1;
+    color: black;
+    font-size: 22px;
+    flex: 1;
 }
 
 /* conteneur des blocs de stats en noir  */
 .site-stats__list {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 /* chaque carré noir */
 .site-stats__list-item {
-  background-color: black;
-  color: white;
-  padding: 15px;
-  border-radius: 10px; /* simple mais pas 6px */
-  width: 100px;
-  height: 100px;
-  text-align: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    /* simple mais pas 6px */
+    width: 100px;
+    height: 100px;
+    text-align: center;
 }
 
 /* dans le carré */
 .site-stats__number {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 /* petit sous texte dans carré */
 .site-stats__label {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 /* ===  la section Featured Locations ========================================== */
 
 .featured-locations__title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
 .featured-locations__separator {
- margin-bottom: 30px; /* espace sous le trait rouge */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 30px;
+
+    
+    /* espace sous le trait rouge */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .featured-locations__list {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
 }
 
 .featured-locations__item--large {
-  width: 382px;
-  height: 400px; /* plus grand en hauteur */
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  flex-shrink: 0;
+    width: 382px;
+    height: 400px;
+
+    /* plus grand en hauteur */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .featured-locations__middle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 180px); /* hauteur plus petite que les grandes images */
-  gap: 20px;
-  border-radius: 12px;
-  align-content: center; /* centre verticalement le bloc si besoin */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 180px);
+
+    /* hauteur plus petite que les grandes images */
+    gap: 20px;
+    border-radius: 12px;
+    align-content: center;
+   
 }
 
 .featured-locations__item--small {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 378px;
-  height: 180px; /* plus petite hauteur */
-  flex-shrink: 0;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 378px;
+    height: 180px;
+    /* plus petite hauteur */
+    flex-shrink: 0;
 }
 
 .featured-locations__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
 }
 
 .featured-locations__label {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  margin: 0;
-  color: white;
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(0,0,0,0.7);
-  pointer-events: none;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
 }
 
 /* ===  la section blog ========================================== */
@@ -548,229 +582,228 @@ text-decoration: none !important; /* enlever le soulignement */
 
 
 .blog {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: white;
-  font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: white;
+    font-family: Arial, sans-serif;
 }
 
 .blog__title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 12px;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
 }
 
 .blog__separator {
-  display: block;
-  margin: 0 auto 40px;
-  width: 150px;
+    display: block;
+    margin: 0 auto 40px;
+    width: 150px;
 }
 
 /* conteneur principal : grand article + sidebarr */
 .blog__container {
-  display: flex;
-  gap: 24px;
-  background-color: #f9f9f9;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 24px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* grand article  gauche famille salon */
 .blog__item--main {
-  flex: 1 1 65%;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
+    flex: 1 1 65%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
 }
 
 .blog__image--main {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
-  display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    display: block;
 }
 
 .blog__item--main .blog__date {
-  font-size: 0.85rem;
-  color: #888;
-  padding: 12px 20px 0 20px;
+    font-size: 0.85rem;
+    color: #888;
+    padding: 12px 20px 0 20px;
 }
 
 .blog__item--main .blog__content {
-  padding: 0 20px 20px 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .blog__item--main .blog__headline {
-  font-size: 1.8rem;
-  margin: 8px 0 12px 0;
-  color: #222;
+    font-size: 1.8rem;
+    margin: 8px 0 12px 0;
+    color: #222;
 }
 
 .blog__item--main .blog__summary {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.4;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.4;
 }
 
 /* sidebar : colonne droite */
 .blog__sidebar {
-  flex: 0 0 35%;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 /* petits articles  */
 .blog__item--small {
-  display: flex;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
 }
 
 /* image petits articles */
 .blog__image--small {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px 0 0 12px;
-  flex-shrink: 0;
-  display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+    flex-shrink: 0;
+    display: block;
 }
 
 /* texte 4 petits articles */
 .blog__item--small .blog__content {
-  padding: 12px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
 }
 
 .blog__item--small .blog__date {
-  font-size: 0.75rem;
-  color: #666;
-  margin-bottom: 6px;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 6px;
 }
 
 .blog__item--small .blog__headline {
-  font-size: 1.1rem;
-  margin: 0 0 6px 0;
-  color: #111;
+    font-size: 1.1rem;
+    margin: 0 0 6px 0;
+    color: #111;
 }
 
 .blog__item--small .blog__summary {
-  font-size: 0.85rem;
-  color: #333;
-  line-height: 1.3;
-  margin: 0;
+    font-size: 0.85rem;
+    color: #333;
+    line-height: 1.3;
+    margin: 0;
 }
 
 /* footer----------------------------------------------------- */
 
 .footer {
-  background-color: #f5f5f5;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #333;
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
 }
 
 .footer__columns {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer__about,
 .footer__nav,
 .footer__locations,
 .footer__newsletter {
-  flex: 1 1 200px;
+    flex: 1 1 200px;
 }
 
 .footer__logo {
-  max-width: 100px;
+    max-width: 100px;
 }
 
 .footer__description {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .footer__social {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .social-icons__link {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .social-icons__icon {
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .footer__title,
 .footer__heading {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #d33;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #d33;
 }
 
 .footer__link {
-  display: block;
-  margin-bottom: 6px;
-  text-decoration: none;
-  color: #333;
+    display: block;
+    margin-bottom: 6px;
+    text-decoration: none;
+    color: #333;
 }
 
 .footer__link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .footer__newsletter-description {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer__form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .input--footer {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
 }
 
 .btn--footer {
-  padding: 10px;
-  background-color: #e53935;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+    padding: 10px;
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .btn--footer:hover {
-  background-color: #c62828;
+    background-color: #c62828;
 }
 
 .footer__copyright {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 12px;
-  color: #777;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #777;
 }
-
