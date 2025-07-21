@@ -2,7 +2,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/*  HEADER */
+/*  HEADER---------------------------------------------------------------------------------------- */
 
 .header {
     display: flex;
@@ -98,7 +98,7 @@ body {
 }
 
 
-/* SECTION PRINCIPALE  */
+/* SECTION PRINCIPALE------------------------------------------------------------------------------------------------  */
 
 
 .main-section {
@@ -207,7 +207,7 @@ body {
     cursor: pointer;
 }
 
-/* section catégories ======================================== */
+/* section catégories ============================================================================================ */
 
 .categories {
     padding: 40px 20px;
@@ -264,7 +264,7 @@ body {
     font-weight: 500;
 }
 
-/* ==================== Section Liste Villas ==================== */
+/* ==================== Section Liste Villas ================================================================== */
 
 .listing {
     padding: 40px 20px;
@@ -286,7 +286,7 @@ body {
     margin: 0 auto 32px auto;
 }
 
-/* ===== Boutons de filtres ===== */
+/* Boutons de filtres  */
 .listing__filters {
     display: flex;
     justify-content: center;
@@ -328,7 +328,7 @@ body {
 }
 
 
-/* ===== Grille de villas 3x2 ===== */
+/* ===== Grille de villas 3x2 ======================== */
 .listing__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -451,7 +451,7 @@ body {
     height: 20px;
 }
 
-/* section statistiques */
+/* section statistiques-------------------------------------------------------------------------------------------- */
 
 
 .site-stats {
@@ -503,7 +503,7 @@ body {
     font-size: 16px;
 }
 
-/* ===  la section Featured Locations ========================================== */
+/* ===  la section Featured Locations ======================================================================== */
 
 .featured-locations__title {
     font-size: 24px;
@@ -581,9 +581,7 @@ body {
     pointer-events: none;
 }
 
-/* ===  la section blog ========================================== */
-
-
+/* ===  la section blog ==================================================================================== */
 
 .blog {
     max-width: 1200px;
@@ -711,7 +709,7 @@ body {
     margin: 0;
 }
 
-/* footer----------------------------------------------------- */
+/* footer----------------------------------------------------------------------------------------------- */
 
 .footer {
     background-color: #f5f5f5;
