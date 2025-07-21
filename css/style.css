@@ -309,6 +309,21 @@ body {
   background-color: #dcdcdc;
 }
 
+/* style specifique pour "All items" */
+.btn--filter1 {
+  background-color: #e53935;
+  color: white;
+  border-radius: 20px;       
+}
+
+/* arrondi les coins pour tous les boutons */
+.btn,
+.btn--filter,
+.btn--filter1 {
+  border-radius: 20px;      
+}
+
+
 /* ===== Grille de villas 3x2 ===== */
 .listing__grid {
   display: grid;
