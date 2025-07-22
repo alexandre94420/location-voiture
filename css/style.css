@@ -453,55 +453,59 @@ body {
 
 /* section statistiques-------------------------------------------------------------------------------------------- */
 
-
 .site-stats {
-    background-color: #f0f0f0;
-    padding:  40px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 180px;
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  
 }
 
-/* titre à gauche noir */
+.site-stats__container {
+  max-width: 1000px; /* moins large que 1200px */
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
 .site-stats__title {
-    color: black;
-    font-size: 28px;
-    flex: 1;
+  color: black;
+  font-size: 28px;
+  line-height: 1.3;
+  width: 250px; /* largeur fixe pour forcer 3 lignes */
+  flex-shrink: 0;
 }
 
-/* conteneur des blocs de stats en noir  */
 .site-stats__list {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap; /* empêche les blocs de passer à la ligne */
 }
 
-/* chaque carré noir */
 .site-stats__list-item {
-    background-color: black;
-    color: white;
-    padding: 25px;
-    border-radius: 10px;
-    /* simple mais pas 6px */
-    width: 140px;
-    height: 140px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* dans le carré */
+
+
 .site-stats__number {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* petit sous texte dans carré */
 .site-stats__label {
-    font-size: 16px;
+  font-size: 16px;
 }
+
 
 /* ===  la section Featured Locations ======================================================================== */
 
