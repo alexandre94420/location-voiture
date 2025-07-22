@@ -880,34 +880,51 @@ body {
             grid-template-columns: 1fr;
         }
     
-        .listing__filters {
-            white-space: nowrap;
-            overflow-x: auto;
-            padding: 0 10px;
-            scroll-behavior: smooth;
-             padding-bottom: 10px;
-            
-            -webkit-overflow-scrolling: touch;
-            
-        }
-    
-        .listing__filters::-webkit-scrollbar {
-            display: none;
-            
-        }
-        .btn--filter,
-        .btn--filter1 {
-            flex: 0 0 auto;
-            /* empêcher les boutons de rétrécir */
-            display: inline-block;
-        }
-    
-        /* SITE STATS */
-        .site-stats {
-            flex-direction: column;
-            gap: 20px;
-            text-align: center;
-        }
+                .listing__filters {
+                    white-space: nowrap;
+                    overflow-x: auto;
+                    padding: 0 10px;
+                    scroll-behavior: smooth;
+                    padding-bottom: 10px;
+        
+                    -webkit-overflow-scrolling: touch;
+                    overflow-x: visible !important;
+                    /* plus de scroll horizontal */
+                    flex-wrap: wrap;
+                    /* les boutons passent à la ligne */
+                    justify-content: flex-start;
+                    /* alignement à gauche */
+                    gap: 8px;
+        
+                }
+        
+                .listing__filters .btn {
+                    flex: 1 1 auto;
+                    /* bouton flexible */
+                    min-width: 120px;
+                    /* largeur mini pour chaque bouton */
+                    white-space: normal;
+                    /* autorise retour à la ligne si texte long */
+                }
+        
+                .listing__filters::-webkit-scrollbar {
+                    display: none;
+        
+                }
+        
+                .btn--filter,
+                .btn--filter1 {
+                    flex: 0 0 auto;
+                    /* empêcher les boutons de rétrécir */
+                    display: inline-block;
+                }
+        
+                /* SITE STATS */
+                .site-stats {
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                }
     
         .site-stats__list {
         flex-direction: column;
