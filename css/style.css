@@ -810,6 +810,17 @@ body {
     color: #777;
 }
 
+.footer__social a {
+  text-decoration: none;
+  border-bottom: none;
+  display: inline-block; /* pour s’assurer qu’ils restent inline */
+}
+
+.social-icons__icon {
+  vertical-align: middle; /* ou top, pour éviter l’espace sous l’image */
+  display: inline-block;  /* laisse l’image inline mais contrôle le vertical align */
+}
+
 /*
 * Responsif pour mobile -------------------------------------------------------------------------------------------------
 */
