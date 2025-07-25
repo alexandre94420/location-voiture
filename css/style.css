@@ -198,14 +198,61 @@ body {
 
 /* bouton de recherche */
 .btn--search {
-    background-color: #f43f5e;
+    background-color: #f43f5e !important;
     color: white;
     border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-weight: 600;
+    border-radius: 50%; /* rond parfait */
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    padding: 0;
+    outline: none;
 }
+.btn--search:hover,
+.btn--search:focus,
+.btn--search:active {
+    background-color: #f43f5e !important;
+}
+/* icône intégrée dans le champ select */
+.select--with-icon {
+    background-image: url('../images/pointGps.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px 16px;
+    padding-left: 38px; /* laisse de la place à l'icône */
+}
+
+/* barre verticale de séparation entre input et select */
+.search-bar__separator {
+    width: 1px;
+    background-color: #ccc;
+    height: 30px;
+    align-self: center;
+}
+
+/* alignement horizontal des éléments */
+.champ-recherche,
+.selecteur-localisation,
+.btn--search {
+    display: flex;
+    align-items: center;
+}
+
+.champ--with-icon {
+    background-image: url('../images/loupe2.svg');
+
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 16px 16px;
+    padding-left: 38px; 
+}
+
+
+
+
 
 /* section catégories ============================================================================================ */
 
@@ -904,11 +951,11 @@ body {
         
                     -webkit-overflow-scrolling: touch;
                     overflow-x: visible !important;
-                    /* plus de scroll horizontal */
+                    
                     flex-wrap: wrap;
-                    /* les boutons passent à la ligne */
+                    
                     justify-content: flex-start;
-                    /* alignement à gauche */
+                    
                     gap: 8px;
         
                 }
@@ -963,7 +1010,41 @@ body {
         flex-direction: column;
         gap: 12px;
     }
+    /* statistiques */
 
+    .site-stats__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-stats__title {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .site-stats__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .site-stats__list-item {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .site-stats__number {
+    font-size: 28px;
+  }
+
+  .site-stats__label {
+    font-size: 14px;
+  }
+}
     /* BLOG */
     .blog__container {
         flex-direction: column;

@@ -37,44 +37,48 @@
             </a>
         </div>
     </header>
+<!-- section principale -->
 
-    <!-- section principale -->
+<section class="main-section">
+    <h1 class="main-section__title">Discover your perfect rental</h1>
+    <p class="main-section__subtitle">Rent Cars, Houses, and Items in Just a Few Clicks</p>
 
-    <section class="main-section">
-        <h1 class="main-section__title">Discover your perfect rental</h1>
-        <p class="main-section__subtitle">Rent Cars, Houses, and Items in Just a Few Clicks</p>
+    <div class="main-section__categories">
+        <button class="btn btn--category">Places</button>
+        <button class="btn btn--category">Rides</button>
+        <button class="btn btn--category">Things</button>
+    </div>
+    
+    <div class="main-section__search search-bar">
 
-        <div class="main-section__categories">
-            <button class="btn btn--category">Places</button>
-            <button class="btn btn--category">Rides</button>
-            <button class="btn btn--category">Things</button>
+        <!-- Champ de recherche texte avec loupe intégrée dans le placeholder -->
+        <div class="champ-recherche">
+            <input class="champ champ--texte champ--with-icon" type="text" placeholder="Search for cars, houses and more">
+
         </div>
-
-        <div class="main-section__search search-bar">
-            <div class="champ-recherche">
-                <img src="images/loupe2.svg" alt="Search icon" class="icone icone--champ" width="16" height="16">
-                <input class="champ champ--texte" type="text" placeholder="Search for cars, houses and more">
-            </div>
-
-
-            <div class="selecteur-localisation">
-                <img src="images/pointGps.svg" alt="Icône GPS" class="icone icone--gps" width="16" height="16">
-                <select class="champ champ--select" name="ville" id="select-ville">
-                    <option value="">Sélectionner une localisation</option>
-                </select>
-                <img src="images/chevron-down.svg" alt="icone déroulereur" class="icone icone--chevron" width="12"
-                    height="12">
-            </div>
-
-
-            <button class="btn btn--search" type="submit">Search</button>
-            <img src="images/loupe.svg" alt="Search" style="height: 16px;">
+    
+        <!-- Séparateur visuel (ex. une barre verticale) -->
+        <div class="search-bar__separator"></div>
+    
+        <!-- Sélecteur de localisation avec icône intégrée via CSS -->
+        <div class="selecteur-localisation">
+            <select class="champ champ--select select--with-icon" name="ville" id="select-ville">
+                <option value="">Sélectionner une localisation</option>
+                <!-- autres options -->
+            </select>
+            
         </div>
-    </section>
+    
+        <!-- Bouton valider avec loupe au centre -->
+        <button class="btn btn--search" aria-label="Rechercher">
+            <img src="images/loupe2.svg" alt="Icône recherche" class="icone icone--btn-loupe" width="16" height="16">
+        </button>
 
+    </div>
+</section>
 
-    <!-- Section catégories -->
-    <section class="categories" id="categories">
+<!-- Section catégories -->
+<section class="categories" id="categories">
         <h2 class="categories__title">Browse From Top Categories</h2>
         <img src="images/TraitRouge.svg" alt="Séparateur décoratif" class="categories__separator" />
         <div class="categories__list">
