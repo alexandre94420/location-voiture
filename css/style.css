@@ -924,7 +924,33 @@ body {
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
+        padding: 0;
+        background: transparent;
     }
+    .search-bar__separator {
+    display: none;
+}
+/* Champs de recherche faire un bouton + visuel*/
+    .btn--search {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.champ-recherche,
+.selecteur-localisation {
+    width: 100%;
+}
+
+/* Input texte */
+.champ--texte,
+.champ--select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 16px;
+}
 
     /* CATEGORIES */
     .categories__list {
