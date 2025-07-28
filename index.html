@@ -19,6 +19,13 @@
         <div class="header__logo">
             <img src="images/logo.webp" alt="Gidak Logo" width="100">
         </div>
+        <!-- le bouton burger visible que sur le smartphone -->
+        <button class="header__burger" aria-label="Ouvrir le menu">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </button>
+
         <nav class="header__nav">
             <a href="#home">Home</a>
             <a href="#rentals"> Rentals </a>
@@ -510,23 +517,35 @@
             </div>
 
         </div>
-
+        
         <!-- ligne des droits -->
         <p class="footer__copyright">
             © Copyright 2024. Designed and Developed by Kavinda
         </p>
-    </footer>
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const filterContainer = document.querySelector('.listing__filters');
-            const firstButton = filterContainer?.querySelector('button');
+        </footer>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const filterContainer = document.querySelector('.listing__filters');
+                const firstButton = filterContainer?.querySelector('button');
 
-            if (filterContainer && firstButton) {
-                // S’assure que le premier bouton est bien visible au chargement
-                filterContainer.scrollLeft = 0;
-            }
-        });
-    </script>
-</body>
+                if (filterContainer && firstButton) {
+                    // S’assure que le premier bouton est bien visible au chargement
+                    filterContainer.scrollLeft = 0;
+                }
+            });
+        </script>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const burger = document.querySelector(".header__burger");
+                const nav = document.querySelector(".header__nav");
+
+                burger.addEventListener("click", () => {
+                    nav.classList.toggle("header__nav--open");
+                });
+            });
+        </script>
+        
+        </body>
 
 </html>
