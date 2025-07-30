@@ -610,13 +610,13 @@ body {
     justify-content: center;
     align-items: stretch;
     gap: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .featured-locations__item--large {
-    width: 382px;
+    width: 30%;
     height: 400px;
-
-    /* plus grand en hauteur */
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -624,11 +624,10 @@ body {
 }
 
 .featured-locations__middle {
+    width: 40%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 180px);
-
-    /* hauteur plus petite que les grandes images */
     gap: 20px;
     border-radius: 12px;
     align-content: center;
@@ -639,9 +638,8 @@ body {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    width: 378px;
+    width: 100%; /* prend la largeur de la grille */
     height: 180px;
-    /* plus petite hauteur */
     flex-shrink: 0;
 }
 
