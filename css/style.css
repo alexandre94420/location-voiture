@@ -334,6 +334,12 @@ body {
 
 /* ==================== Section Liste Villas ================================================================== */
 
+/* Cacher le bouton filtre burger sur desktop */
+.burger {
+    display: none;
+}
+
+
 .listing {
     padding: 40px 20px;
     max-width: 1200px;
@@ -590,7 +596,7 @@ body {
 }
 
 
-/* ===  la section Featured Locations ======================================================================== */
+/* ===  la section Featured Locations - villa  ======================================================================== */
 
 .featured-locations__title {
     font-size: 24px;
@@ -1052,27 +1058,38 @@ body {
     justify-content: center;
     padding: 12px;
     }
-
-    /* LISTING */
+    
+    /* LISTING----------------------------------------Villa------------------- */
+    
+    
     .listing__grid {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-     /* Affiche  bouton burger */
+    
+    
+    /* Affiche  bouton burger */
     .listing__burger {
-    display: none; /* sera activé uniquement en mobile */
-    background-color: #e53935;
-    color: white;
-    padding: 10px 18px;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-bottom: 12px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        display: none !important;
+        background-color: #e53935;
+        color: white;
+        padding: 10px 18px;
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-bottom: 12px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
-
+    
+    @media (max-width: 480px) {
+        .burger {
+        display: inline-block;
+        /* styles de ton bouton burger ici */
+    }
+}
+    
     .listing__filters {
         display: none;
         flex-direction: column;
@@ -1114,7 +1131,7 @@ body {
         align-items: center;
     }
 
-    /* FEATURED LOCATIONS */
+    /* FEATURED LOCATIONS --- villa */
 
    @media (max-width: 768px) {
   .featured-locations__list {
