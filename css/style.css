@@ -160,7 +160,7 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 60px;
-    /* Pour créer un espace avant la barre de recherche */
+   
 }
 
 .btn--category {
@@ -195,22 +195,52 @@ body {
     justify-content: center;
     z-index: 1;
     margin-top: 40px;
-    /* Ajuste ici si tu veux qu'elle soit pile à hauteur du gosse */
+    
 }
 
 /* champs */
-.champ--texte,
+.champ--texte {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 10px 15px 10px 40px; 
+  color: #000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .champ--select {
     border: 1px solid #ccc;
     border-radius: 30px;
     padding: 10px 15px;
     font-size: 1rem;
     color: #000;
+    padding-left: 38px;
 }
+
 
 /* place holder */
 .champ--texte::placeholder {
-    color: #aaa;
+  color: #aaa;
+}
+
+@media screen and (max-width: 480px) {
+  .champ-recherche {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    display: flex !important; 
+  }
+}
+
+.icon-input {
+  position: absolute;
+  left: 16px;
+  top: 48%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 10;
 }
 
 /* bouton de recherche */
@@ -254,21 +284,25 @@ body {
     align-self: center;
 }
 
-/* alignement horizontal des éléments */
-.champ-recherche,
+
 .selecteur-localisation,
 .btn--search {
     display: flex;
     align-items: center;
 }
+.champ-recherche {
+background-image: url('../images/loupe2.svg');
+position: relative; /* essentiel pour que .icon-input soit positionnée correctement */
+width: 280px;
+}
 
-.champ--with-icon {
-    
-
-    background-repeat: no-repeat;
-    background-position: 12px center;
-    background-size: 16px 16px;
-    padding-left: 38px;
+.champ--texte {
+padding-left: 44px; /* laisse la place à la loupe */
+width: 100%;
+box-sizing: border-box;
+height: 40px; /* adapte la hauteur de l’input */
+line-height: 40px; /* pour un alignement vertical du texte */
+font-size: 16px;
 }
 
 /* section catégories ============================================================================================ */
@@ -295,9 +329,9 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* Pour s'adapter aux petits écrans */
+    /* adapter aux petits écrans */
     gap: 16px;
-    /* Espacement entre les boutons */
+    /* espacement entre les boutons */
 }
 
 /* element unique  des  bouton de catégorie */
@@ -526,11 +560,11 @@ body {
 }
 
 .btn--load-more {
-  color: white;               /* texte blanc */
-  background-color: #e53935;  /* fond rouge */
-  display: block;             /* pour que margin auto fonctionne */
-  margin: 2rem auto;          /* centre horizontalement */
-  text-align: center;         /* centre le texte à l'intérieur si nécessaire */
+  color: white;               
+  background-color: #e53935;  
+  display: block;             
+  margin: 2rem auto;          
+  text-align: center;         
 }
 
 /* section statistiques-------------------------------------------------------------------------------------------- */
@@ -555,7 +589,7 @@ body {
     font-size: 28px;
     line-height: 1.3;
     width: 250px;
-    /* largeur fixe pour forcer 3 lignes */
+    
     flex-shrink: 0;
 }
 
@@ -563,7 +597,7 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
-    /* empêche les blocs de passer à la ligne */
+    
 }
 
 .site-stats__list-item {
@@ -908,7 +942,8 @@ body {
     vertical-align: middle;
     /* ou top, pour éviter l’espace sous l’image */
     display: inline-block;
-    /* laisse l’image inline mais contrôle le vertical align */
+    /* pour éviter l’espace sous l’image */
+    vertical-align: top;
 }
 
 /*
@@ -946,7 +981,7 @@ body {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* ⬅️ pour aligner verticalement avec le burger */
+       
         width: 100%;
         padding-top: 0;
     }
@@ -987,6 +1022,15 @@ body {
         gap: 0.5rem;
     }
 
+     /* cache la loupe  */
+  .icon-input {
+    display: none;
+  }
+
+   .select--with-icon {
+  background-image: none;
+  padding-left: 15px; /* réduit le padding maintenant qu'il n'y a plus d'icône */
+}
 
     /* SECTION PRINCIPALE ----------------------------------------------------*/
     .main-section {
@@ -1081,7 +1125,7 @@ body {
     @media (max-width: 480px) {
         .burger {
             display: inline-block;
-            /* styles de ton bouton burger ici */
+           
         }
     }
 
@@ -1145,7 +1189,7 @@ body {
             gap: 20px;
             width: 100%;
             padding: 0 10px;
-            /* léger padding pour l’extérieur */
+            
             box-sizing: border-box;
         }
 
@@ -1253,4 +1297,4 @@ body {
 .footer__columns {
     flex-direction: column;
     gap: 30px;
-}
+} }
