@@ -263,17 +263,13 @@ body {
 }
 
 .champ--with-icon {
-    background-image: url('../images/loupe2.svg');
+    
 
     background-repeat: no-repeat;
     background-position: 12px center;
     background-size: 16px 16px;
     padding-left: 38px;
 }
-
-
-
-
 
 /* section catégories ============================================================================================ */
 
@@ -1180,13 +1176,11 @@ body {
 
     /* statistiques----------------------------------------------------- */
 
-    .site-stats {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+.site-stats {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
     }
-
-}
 
 .site-stats__list {
     flex-direction: column;
