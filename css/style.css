@@ -519,6 +519,14 @@ body {
     height: 20px;
 }
 
+.btn--load-more {
+  color: white;               /* texte blanc */
+  background-color: #e53935;  /* fond rouge */
+  display: block;             /* pour que margin auto fonctionne */
+  margin: 2rem auto;          /* centre horizontalement */
+  text-align: center;         /* centre le texte à l'intérieur si nécessaire */
+}
+
 /* section statistiques-------------------------------------------------------------------------------------------- */
 
 .site-stats {
