@@ -460,6 +460,10 @@ body {
     margin-bottom: 16px;
 }
 
+.listing__price-amount {
+    color: #e53935;
+}
+
 .listing__detail {
     background-color: #eee;
     padding: 4px 8px;
