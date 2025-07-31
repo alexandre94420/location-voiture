@@ -133,20 +133,20 @@
 
     <!-- Filtres (cachés en mobile, visibles via le menu burger) -->
     <div class="listing__filters" id="filters-menu">
-        <button class="btn btn--filter1">All items (5125)</button>
-        <button class="btn btn--filter">Residential Spaces (64)</button>
-        <button class="btn btn--filter">Sports Venues</button>
-        <button class="btn btn--filter">Meeting Spaces</button>
-        <button class="btn btn--filter">Vans & Buses</button>
-        <button class="btn btn--filter">Cars & SUVs</button>
-        <button class="btn btn--filter">Lorries & Industrial Vehicles</button>
-        <button class="btn btn--filter">&gt;</button>
+        <button class="btn btn--filter1" data-category="all">All items (5125)</button>
+        <button class="btn btn--filter" data-category="residential">Residential Spaces (64)</button>
+        <button class="btn btn--filter" data-category="sports">Sports Venues</button>
+        <button class="btn btn--filter" data-category="meeting">Meeting Spaces</button>
+        <button class="btn btn--filter" data-category="vans">Vans & Buses</button>
+        <button class="btn btn--filter" data-category="cars">Cars & SUVs</button>
+        <button class="btn btn--filter" data-category="lorries">Lorries & Industrial Vehicles</button>
+        <button class="btn btn--filter" data-category="more">&gt;</button>
     </div>
 
     <!-- Grille des cartes villas -->
     <div class="listing__grid">
             <!-- Villa 1 -->
-            <div class="listing__card">
+            <div class="listing__card"  data-category="residential">
                 <div class="listing__media">
                     <div class="listing__badge">For Rent</div>
                     <img class="listing__image" src="images/villa1.webp" alt="Luxury Villa ...." width="200">
@@ -173,7 +173,7 @@
             </div>
 
             <!-- Villa 2 -->
-            <div class="listing__card">
+            <div class="listing__card" data-category="sports">
                 <div class="listing__media">
                     <div class="listing__badge">For Rent</div>
                     <img class="listing__image" src="images/villa2.webp" alt="Luxury Villa ...." width="200">
@@ -200,7 +200,7 @@
             </div>
 
             <!-- Villa 3 -->
-            <div class="listing__card">
+            <div class="listing__card"  data-category="meeting">
                 <div class="listing__media">
                     <div class="listing__badge">For Rent</div>
                     <img class="listing__image" src="images/villa2.webp" alt="Luxury Villa ...." width="200">
@@ -227,7 +227,7 @@
             </div>
 
             <!-- Villa 4 -->
-            <div class="listing__card">
+            <div class="listing__card"  data-category="meeting">
                 <div class="listing__media">
                     <div class="listing__badge">For Rent</div>
                     <img class="listing__image" src="images/villa1.webp" alt="Luxury Villa ...." width="200">
@@ -254,7 +254,7 @@
             </div>
 
             <!-- Villa 5 -->
-            <div class="listing__card">
+            <div class="listing__card" data-category="vans">
                 <div class="listing__media">
                     <div class="listing__badge">For Rent</div>
                     <img class="listing__image" src="images/villa2.webp" alt="Luxury Villa ...." width="200">
@@ -281,7 +281,7 @@
             </div>
 
             <!-- Villa 6 -->
-            <div class="listing__card">
+            <div class="listing__card" data-category="lorries">
                 <div class="listing__media">
                     <div class="listing__badge">For Rent</div>
                     <img class="listing__image" src="images/villa1.webp" alt="Luxury Villa ...." width="200">
@@ -561,7 +561,11 @@
                     burgerToggle.textContent = '☰ Filters';
                 }
             });
-        </script>
+                </script>
+        <script src="tri-cards.js"></script>
+        </body>
+        
+        </html>
         
         </body>
         
