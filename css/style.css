@@ -58,169 +58,163 @@ body {
 }
 
 .header__link {
-    color: #e60023 !important;
-    /* couleur rouge forcée */
-    text-decoration: none !important;
-    /* enlever le soulignement */
+color: #e60023 !important;
+/* couleur rouge  */
+text-decoration: none !important;
+/* enlever soulignement */
 }
 
 .header__link:hover {
-    color: #e60023;
+color: #e60023;
 }
 
 .header__icon {
-    width: 16px;
-
-
-    height: 16px;
+width: 16px;
+height: 16px;
 }
 
 /* bouton principal "post listing" */
 .btn--primary {
-    color: #e60023 !important;
-    /* texte rouge tout le temps */
-    background-color: transparent;
-    /* Si tu veux fond transparent */
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
+color: #e60023 !important;
+/* texte rouge tout le temps */
+background-color: transparent;
+/* Si tu veux fond transparent */
+border: none;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+transition: background-color 0.3s ease;
 }
 
 .btn--primary {
-    background-color: #e60023 !important;
-    color: #fff !important;
+background-color: #e60023 !important;
+color: #fff !important;
 }
 
 .btn--primary:hover {
-    background-color: #c5001e;
+background-color: #c5001e;
 }
 
 .header__burger {
-    display: none;
-    /* caché pour l'affiche desktop */
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
+display: none;
+/* caché pour l'affiche desktop */
+flex-direction: column;
+gap: 5px;
+background: none;
+border: none;
+cursor: pointer;
+padding: 0.5rem;
 }
 
 .header__burger-line {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    border-radius: 2px;
+width: 25px;
+height: 3px;
+background-color: #000;
+border-radius: 2px;
 }
 
 .main-section {
-    background-image: url('../images/menu.webp');
-    background-size: 160%;
-    background-position: center 18%;
-    background-repeat: no-repeat;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-    text-align: center;
-    padding: 120px 20px 60px;
-    min-height: 100vh;
-    color: #000;
+background-image: url('../images/menu.webp');
+background-size: 160%;
+background-position: center 18%;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+text-align: center;
+padding: 120px 20px 60px;
+min-height: 100vh;
+color: #000;
 }
 
 /* titre principal */
 .main-section__title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: inherit;
+font-size: 3rem;
+margin-bottom: 20px;
+font-weight: 700;
+color: inherit;
 }
 
 /* Partie titre "perfect" en rouge */
 .main-section__title span.highlight {
-    color: #f43f5e;
+color: #f43f5e;
 }
 
 /* sous-titre */
 .main-section__subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    color: #000;
+font-size: 1.5rem;
+margin-bottom: 40px;
+color: #000;
 }
 
 /* boutons catégories */
 .main-section__categories {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 60px;
-   
+display: flex;
+gap: 10px;
+margin-bottom: 60px;
 }
 
 .btn--category {
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
+border-radius: 30px;
+padding: 10px 20px;
+font-weight: 600;
+border: none;
+cursor: pointer;
 }
 
 /* premier bouton rouge */
 .btn--category:first-child {
-    background-color: #f43f5e;
-    color: white;
+background-color: #f43f5e;
+color: white;
 }
 
 /* les deux autres blanc*/
 .btn--category:nth-child(2),
 .btn--category:nth-child(3) {
-    background-color: white;
-    color: black;
+ background-color: white;
+color: black;
 }
 
 /* barre de recherche  */
 .main-section__search {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 30px;
-    padding: 15px 20px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 1;
-    margin-top: 40px;
-    
+background: rgba(255, 255, 255, 0.95);
+border-radius: 30px;
+padding: 15px 20px;
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
+z-index: 1;
+margin-top: 40px;
 }
 
 /* champs */
 .champ--texte {
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  padding: 10px 15px 10px 40px; 
-  color: #000;
-  width: 100%;
-  box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 30px;
+padding: 10px 15px 10px 40px; 
+color: #000;
+width: 100%;
+box-sizing: border-box;
 }
 
 .champ--select {
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    color: #000;
-    padding-left: 38px;
+border: 1px solid #ccc;
+border-radius: 30px;
+padding: 10px 15px;
+font-size: 1rem;
+color: #000;
+padding-left: 38px;
 }
 
 
 /* place holder */
 .champ--texte::placeholder {
-  color: #aaa;
+color: #aaa;
 }
 
 @media screen and (max-width: 480px) {
@@ -233,37 +227,37 @@ body {
 }
 
 .icon-input {
-  position: absolute;
-  left: 16px;
-  top: 48%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  pointer-events: none;
-  z-index: 10;
+position: absolute;
+left: 16px;
+top: 48%;
+transform: translateY(-50%);
+width: 16px;
+height: 16px;
+pointer-events: none;
+z-index: 10;
 }
 
 /* bouton de recherche */
 .btn--search {
-    background-color: #f43f5e !important;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    /* rond parfait */
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
+background-color: #f43f5e !important;
+color: white;
+border: none;
+border-radius: 50%;
+/* rond parfait */
+width: 48px;
+height: 48px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+padding: 0;
+outline: none;
 }
 
 .btn--search:hover,
 .btn--search:focus,
 .btn--search:active {
-    background-color: #f43f5e !important;
+background-color: #f43f5e !important;
 }
 
 /* icône intégrée dans le champ select */
@@ -278,17 +272,17 @@ body {
 
 /* barre verticale de séparation entre input et select */
 .search-bar__separator {
-    width: 1px;
-    background-color: #ccc;
-    height: 30px;
-    align-self: center;
+width: 1px;
+background-color: #ccc;
+height: 30px;
+align-self: center;
 }
 
 
 .selecteur-localisation,
 .btn--search {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 }
 .champ-recherche {
 background-image: url('../images/loupe2.svg');
@@ -326,40 +320,40 @@ font-size: 16px;
 
 /* list des boutons de catégories */
 .categories__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* adapter aux petits écrans */
-    gap: 16px;
-    /* espacement entre les boutons */
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+/* adapter aux petits écrans */
+gap: 16px;
+/* espacement entre les boutons */
 }
 
 /* element unique  des  bouton de catégorie */
 .categories__item {
-    display: flex;
-    align-items: center;
-    background-color: #f5f5f5;
-    padding: 10px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+display: flex;
+align-items: center;
+background-color: #f5f5f5;
+padding: 10px 16px;
+border-radius: 20px;
+cursor: pointer;
+transition: background-color 0.2s;
 }
 
 .categories__item:hover {
-    background-color: #e0e0e0;
+background-color: #e0e0e0;
 }
 
 /* icône à gauche du bouton */
 .categories__icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+width: 24px;
+height: 24px;
+margin-right: 8px;
 }
 
 /* texte du bouton */
 .categories__label {
-    font-size: 16px;
-    font-weight: 500;
+font-size: 16px;
+font-weight: 500;
 }
 
 /* ==================== Section Liste Villas ================================================================== */
@@ -934,23 +928,22 @@ font-size: 16px;
     text-decoration: none;
     border-bottom: none;
     display: inline-block;
-    /* pour s’assurer qu’ils restent inline */
+    /* inline */
 }
 
 .social-icons__icon {
     vertical-align: middle;
-    /* ou top, pour éviter l’espace sous l’image */
     display: inline-block;
-    /* pour éviter l’espace sous l’image */
+    /* pas d'espace sous l’image */
     vertical-align: top;
 }
 
 /*
-* Responsif pour mobile -------------------------------------------------------------------------------------------------
-*/
+* ------------------------------------------------------Responsif pour mobile ------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
 
-    /* HEADER */
+    /* HEADER------------------------------------------------------------ */
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -1028,10 +1021,10 @@ font-size: 16px;
 
    .select--with-icon {
   background-image: none;
-  padding-left: 15px; /* réduit le padding maintenant qu'il n'y a plus d'icône */
+  padding-left: 15px; 
 }
 
-    /* SECTION PRINCIPALE ----------------------------------------------------*/
+    /* SECTION PRINCIPALE -------------------------------------------------------------------------------------------*/
     .main-section {
         padding: 80px 10px 40px;
         background-size: cover;
@@ -1097,7 +1090,7 @@ font-size: 16px;
         padding: 12px;
     }
 
-    /* LISTING ------------------------------------MENU  DES Villa------------------- */
+    /* LISTING ------------------------------------MENU  DES Villa--------------------------------------------- */
 
 
     .listing__grid {
@@ -1178,7 +1171,7 @@ font-size: 16px;
 
 
 
-    /* FEATURED LOCATIONS --- villa-------------------------------------------------- */
+    /* FEATURED LOCATIONS -------------------------- liste des villa------------------------------------------------------------ */
 
     @media (max-width: 768px) {
         .featured-locations__list {
@@ -1217,7 +1210,7 @@ font-size: 16px;
         }
     }
 
-    /* statistiques----------------------------------------------------- */
+    /* ---------------------------------------statistiques--------------------------------------------------------------------------------- */
 
 .site-stats {
     flex-direction: column;
@@ -1265,7 +1258,7 @@ font-size: 16px;
 }
 
 
-/* BLOG ------------------------------- */
+/* ----------------------------------------------------BLOG ------------------------------- */
 .blog__container {
     flex-direction: column;
 }
@@ -1292,8 +1285,8 @@ font-size: 16px;
     align-items: center;
 }
 
-/* FOOTER */
+/* FOOTER-------------------------------------------------------------------------- */
 .footer__columns {
     flex-direction: column;
     gap: 30px;
-} }
+}}
