@@ -1,41 +1,51 @@
-// quand la page est vraiment chargée
-document.addEventListener('DOMContentLoaded', function() {
+// Quand la page est bien chargée
+document.addEventListener('DOMContentLoaded', function () {
 
-  // on apporte tous les boutons de filtre
-  const buttons = document.querySelectorAll('.listing__filters button');
+  // On récupère tous les boutons de filtre (en haut)
+  const boutons = document.querySelectorAll('.listing__filters button');
 
-  // on apporte toutes les cartes villas
-  const cards = document.querySelectorAll('.listing__card');
+  // On récupère toutes les cartes de villas
+  const cartes = document.querySelectorAll('.listing__card');
 
-  // pour chaque bouton, on ajoute un event clic pour ecouter le bouton
-  buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
+  // Pour chaque bouton
+  boutons.forEach(function (bouton) {
 
-      // On recupere la catégorie que de ce bouton filtre
-      const category = button.getAttribute('data-category');
+    // Quand on clique dessus
+    bouton.addEventListener('click', function () {
 
-      // si la catégorie cest 'all', on affiche toutes les cartes
-      if (category === 'all') {
-        cards.forEach(function(card) {
-          card.style.display = 'block'; // affichage 
-        });
-        return; // on sort 
-      }
+      // On prend la catégorie du bouton
+      const categorieCliquee = bouton.getAttribute('data-category');
 
-      // sinon on doit filtrer
-      cards.forEach(function(card) {
-
-        // ramener la catégorie de la carte
-        const cardCategory = card.getAttribute('data-category');
-
-        // Si la carte correspond à la catégorie choisie, on affiche  sinon on cache tout
-       
-        if (cardCategory === category) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+      // D'abord, on enlève la couleur active de tous les boutons
+      boutons.forEach(function (b) {
+        b.classList.remove('active');
       });
+
+      // Puis on ajoute la couleur rouge (classe active) sur le bouton cliqué
+      bouton.classList.add('active');
+
+      // Si on a cliqué sur "All"
+      if (categorieCliquee === 'all') {
+        // On affiche toutes les cartes
+        cartes.forEach(function (carte) {
+          carte.style.display = 'block';
+        });
+      } else {
+        // Sinon, on filtre les cartes selon la catégorie
+        cartes.forEach(function (carte) {
+
+          // On regarde la catégorie de chaque carte
+          const categorieCarte = carte.getAttribute('data-category');
+
+          // Si la carte correspond, on l'affiche
+          if (categorieCarte === categorieCliquee) {
+            carte.style.display = 'block';
+          } else {
+            // Sinon, on la cache
+            carte.style.display = 'none';
+          }
+        });
+      }
     });
   });
 });

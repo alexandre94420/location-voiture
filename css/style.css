@@ -166,18 +166,14 @@ border: none;
 cursor: pointer;
 }
 
-/* premier bouton rouge */
-.btn--category:first-child {
-background-color: #f43f5e;
-color: white;
+
+
+/* bouton actif rouge */
+.btn--category.active {
+  background-color: #f43f5e;
+  color: white;
 }
 
-/* les deux autres blanc*/
-.btn--category:nth-child(2),
-.btn--category:nth-child(3) {
- background-color: white;
-color: black;
-}
 
 /* barre de recherche  */
 .main-section__search {
@@ -259,6 +255,24 @@ outline: none;
 .btn--search:active {
 background-color: #f43f5e !important;
 }
+.btn--category,
+.btn--category:focus,
+.btn--category:active,
+.btn--category:hover,
+.btn--category.active,
+.btn--category.active:hover,
+.btn--category.active:focus,
+.btn--category.active:active {
+  background-color: transparent;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 /* icône intégrée dans le champ select */
 .select--with-icon {
@@ -291,13 +305,14 @@ width: 280px;
 }
 
 .champ--texte {
-padding-left: 44px; /* laisse la place à la loupe */
+padding-left: 44px; 
 width: 100%;
 box-sizing: border-box;
-height: 40px; /* adapte la hauteur de l’input */
-line-height: 40px; /* pour un alignement vertical du texte */
+height: 40px; 
+line-height: 40px;
 font-size: 16px;
 }
+
 
 /* section catégories ============================================================================================ */
 
@@ -394,6 +409,11 @@ font-weight: 500;
     /* 1 ligne seulement */
     overflow-x: auto;
     /* au cas où ça déborde */
+}
+
+.listing__filters button.active {
+  background-color: #e53935;
+  color: #fff;
 }
 
 /* Boutons style simple */
